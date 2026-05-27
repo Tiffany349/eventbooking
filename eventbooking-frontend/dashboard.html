@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎟 Event Booking
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="showEvents()">
+                Ver Eventos
+            </button>
+
+            <button onclick="showBookings()">
+                Mis Reservas
+            </button>
+
+            <button onclick="logout()">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1 id="welcome">
+            Bienvenido 👋
+        </h1>
+
+        <p>
+            Reserva tus eventos favoritos
+        </p>
+
+    </section>
+
+    <!-- MENSAJES -->
+    <div id="message"
+         class="message">
+    </div>
+
+    <!-- EVENTOS -->
+    <section id="eventsSection"
+             class="section"
+             style="display:none;">
+
+        <h2>
+            Eventos Disponibles
+        </h2>
+
+        <div id="events"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- RESERVAS -->
+    <section id="bookingsSection"
+             class="section"
+             style="display:none;">
+
+        <h2>
+            Mis Reservas
+        </h2>
+
+        <div id="bookings"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            Event Booking System © 2026
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
