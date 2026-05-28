@@ -1,6 +1,7 @@
 package sv.udb.eventbooking.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,12 +10,21 @@ import org.springframework.http.HttpMethod;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
+=======
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 import org.springframework.security.config.http.SessionCreationPolicy;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import org.springframework.security.web.SecurityFilterChain;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
@@ -42,7 +52,10 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
+<<<<<<< HEAD
                         // PUBLICOS
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
                         .requestMatchers(
                                 "/api/auth/**",
                                 "/swagger-ui/**",
@@ -50,6 +63,7 @@ public class SecurityConfig {
                                 "/v3/api-docs/**"
                         ).permitAll()
 
+<<<<<<< HEAD
                         // VER EVENTOS -> USER Y ADMIN
                         .requestMatchers(
                                 HttpMethod.GET,
@@ -75,6 +89,8 @@ public class SecurityConfig {
                         ).hasAuthority("ADMIN")
 
                         // TODO LO DEMÁS
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
                         .anyRequest().authenticated()
                 )
 

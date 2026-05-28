@@ -9,6 +9,7 @@ function token() {
     );
 }
 
+<<<<<<< HEAD
 // ROLE
 function role() {
 
@@ -17,6 +18,8 @@ function role() {
     );
 }
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 // MENSAJES
 function showMessage(msg) {
 
@@ -96,12 +99,16 @@ async function login() {
 
         localStorage.setItem(
             "username",
+<<<<<<< HEAD
             data.username
         );
 
         localStorage.setItem(
             "role",
             data.role
+=======
+            username
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
         );
 
         window.location.href =
@@ -236,6 +243,7 @@ window.onload = () => {
             username +
             " 👋";
     }
+<<<<<<< HEAD
 
     if (
         role() === "ADMIN"
@@ -252,6 +260,8 @@ window.onload = () => {
                 "block";
         }
     }
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 };
 
 //
@@ -267,10 +277,13 @@ function showEvents() {
         "bookingsSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
     document.getElementById(
         "adminSection"
     ).style.display = "none";
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     loadEvents();
 }
 
@@ -287,14 +300,18 @@ function showBookings() {
         "eventsSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
     document.getElementById(
         "adminSection"
     ).style.display = "none";
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     loadBookings();
 }
 
 //
+<<<<<<< HEAD
 // PANEL ADMIN
 //
 function showAdminPanel() {
@@ -405,6 +422,10 @@ async function loadAdminEvents() {
 // CARGAR EVENTOS
 //
 
+=======
+// CARGAR EVENTOS
+//
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 async function loadEvents() {
 
     try {
@@ -419,6 +440,7 @@ async function loadEvents() {
             }
         );
 
+<<<<<<< HEAD
         // VALIDAR RESPUESTA
         if (!res.ok) {
 
@@ -438,12 +460,18 @@ async function loadEvents() {
             return;
         }
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
         const events =
             await res.json();
 
         let html = "";
 
+<<<<<<< HEAD
         events.forEach((e) => {
+=======
+        events.forEach(e => {
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 
             html += `
                 <div class="card">
@@ -568,6 +596,7 @@ async function loadBookings() {
 
         let html = "";
 
+<<<<<<< HEAD
         const activeBookings =
             bookings.filter(
                 b => b.status !== "CANCELLED"
@@ -586,6 +615,9 @@ async function loadBookings() {
         }
 
         activeBookings.forEach((b) => {
+=======
+        bookings.forEach(b => {
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 
             html += `
                 <div class="card">
@@ -610,7 +642,13 @@ async function loadBookings() {
                     </p>
 
                     <button
+<<<<<<< HEAD
                         onclick="cancelBooking(${b.id_booking})">
+=======
+                        onclick="cancelBooking(
+                            ${b.id_booking}
+                        )">
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 
                         Cancelar
 
@@ -629,7 +667,11 @@ async function loadBookings() {
         console.log(error);
 
         showMessage(
+<<<<<<< HEAD
             "Error cargando reservas"
+=======
+            "No se pudieron cargar reservas"
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
         );
     }
 }
@@ -657,8 +699,11 @@ async function cancelBooking(id) {
             "Reserva cancelada"
         );
 
+<<<<<<< HEAD
         loadBookings();
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     } catch (error) {
 
         console.log(error);
@@ -666,6 +711,7 @@ async function cancelBooking(id) {
 }
 
 //
+<<<<<<< HEAD
 // CREAR EVENTO
 //
 //
@@ -962,6 +1008,8 @@ async function deleteEvent(id) {
 
 
 //
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 // LOGOUT
 //
 function logout() {
@@ -974,10 +1022,13 @@ function logout() {
         "username"
     );
 
+<<<<<<< HEAD
     localStorage.removeItem(
         "role"
     );
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     window.location.href =
         "index.html";
 }

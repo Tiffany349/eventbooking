@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+<<<<<<< HEAD
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
@@ -30,13 +31,30 @@ import java.util.List;
 @Component
 public class JwtAuthenticationFilter
         extends OncePerRequestFilter {
+=======
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import java.io.IOException;
+import java.util.Collections;
+
+@Component
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 
     @Autowired
     private JwtService jwtService;
 
+<<<<<<< HEAD
     @Autowired
     private UserRepository userRepository;
 
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     @Override
     protected void doFilterInternal(
             HttpServletRequest request,
@@ -51,6 +69,7 @@ public class JwtAuthenticationFilter
 
         final String username;
 
+<<<<<<< HEAD
         // SI NO HAY TOKEN
         if (
                 authHeader == null ||
@@ -61,10 +80,17 @@ public class JwtAuthenticationFilter
                     request,
                     response
             );
+=======
+        if (authHeader == null ||
+                !authHeader.startsWith("Bearer ")) {
+
+            filterChain.doFilter(request, response);
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 
             return;
         }
 
+<<<<<<< HEAD
         // EXTRAER TOKEN
         jwt = authHeader.substring(7);
 
@@ -133,5 +159,43 @@ public class JwtAuthenticationFilter
                 request,
                 response
         );
+=======
+        jwt = authHeader.substring(7);
+
+        username = jwtService.extractUsername(jwt);
+
+        if (username != null &&
+                SecurityContextHolder
+                        .getContext()
+                        .getAuthentication() == null) {
+
+            User userDetails = new User(
+                    username,
+                    "",
+                    Collections.emptyList()
+            );
+
+            if (jwtService.isTokenValid(jwt, username)) {
+
+                UsernamePasswordAuthenticationToken authToken =
+                        new UsernamePasswordAuthenticationToken(
+                                userDetails,
+                                null,
+                                userDetails.getAuthorities()
+                        );
+
+                authToken.setDetails(
+                        new WebAuthenticationDetailsSource()
+                                .buildDetails(request)
+                );
+
+                SecurityContextHolder
+                        .getContext()
+                        .setAuthentication(authToken);
+            }
+        }
+
+        filterChain.doFilter(request, response);
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
     }
 }

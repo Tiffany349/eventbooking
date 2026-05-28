@@ -365,6 +365,7 @@ body{
 .footer{
 
     margin-top: auto;
+<<<<<<< HEAD
 }
 
 /* ===== ADMIN ===== */
@@ -441,4 +442,6 @@ body{
 .admin-buttons button{
 
     flex: 1;
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
 }
