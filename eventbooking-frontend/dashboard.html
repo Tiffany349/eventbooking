@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Dashboard | Event Booking
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎟 Event Booking
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="showEvents()">
+                Ver Eventos
+            </button>
+
+            <button onclick="showBookings()">
+                Mis Reservas
+            </button>
+
+            <!-- SOLO ADMIN -->
+            <button
+                id="adminButton"
+                onclick="showAdminPanel()"
+                style="display:none;">
+
+                Panel Admin
+
+            </button>
+
+            <button onclick="logout()">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1 id="welcome">
+                Bienvenido 👋
+            </h1>
+
+            <p>
+                Reserva tus eventos favoritos
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- MENSAJES -->
+    <div id="message"
+         class="message">
+    </div>
+
+    <!-- EVENTOS -->
+    <section id="eventsSection"
+             class="section"
+             style="display:none;">
+
+        <div class="section-header">
+
+            <h2>
+                🎫 Eventos Disponibles
+            </h2>
+
+        </div>
+
+        <div id="events"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- RESERVAS -->
+    <section id="bookingsSection"
+             class="section"
+             style="display:none;">
+
+        <div class="section-header">
+
+            <h2>
+                📌 Mis Reservas
+            </h2>
+
+        </div>
+
+        <div id="bookings"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- ADMIN -->
+    <section id="adminSection"
+             class="section"
+             style="display:none;">
+
+        <div class="section-header">
+
+            <h2>
+                👑 Panel Administrador
+            </h2>
+
+            <p>
+                Gestiona eventos del sistema
+            </p>
+
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="admin-form-container">
+
+            <div class="admin-form">
+
+                <input
+                    type="text"
+                    id="eventTitle"
+                    placeholder="Título del evento">
+
+                <input
+                    type="text"
+                    id="eventDescription"
+                    placeholder="Descripción">
+
+                <input
+                    type="datetime-local"
+                    id="eventDate">
+
+                <input
+                    type="text"
+                    id="eventVenue"
+                    placeholder="Lugar">
+
+                <input
+                    type="number"
+                    id="eventCapacity"
+                    placeholder="Capacidad">
+
+                <input
+                    type="number"
+                    id="eventPrice"
+                    placeholder="Precio">
+<button onclick="saveEvent()">
+    Crear Evento
+</button>
+
+            </div>
+
+        </div>
+
+        <!-- EVENTOS ADMIN -->
+        <div id="adminEvents"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            Event Booking System © 2026
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
