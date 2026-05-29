@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎟 Event Booking
+        </div>
+
+        <div class="nav-buttons">
+
+            <button onclick="showEvents()">
+                Ver Eventos
+            </button>
+
+            <button onclick="showBookings()">
+                Mis Reservas
+            </button>
+
+            <button
+                id="adminButton"
+                onclick="showAdminPanel()"
+                style="display:none;">
+
+                Panel Admin
+
+            </button>
+
+            <button onclick="logout()">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1 id="welcome">
+            Bienvenido 👋
+        </h1>
+
+        <p>
+            Reserva tus eventos favoritos
+        </p>
+
+    </section>
+
+    <!-- MENSAJES -->
+    <div id="message"
+         class="message">
+    </div>
+
+    <!-- EVENTOS -->
+    <section id="eventsSection"
+             class="section"
+             style="display:none;">
+
+        <h2>
+            Eventos Disponibles
+        </h2>
+
+        <div id="events"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- RESERVAS -->
+    <section id="bookingsSection"
+             class="section"
+             style="display:none;">
+
+        <h2>
+            Mis Reservas
+        </h2>
+
+        <div id="bookings"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- ADMIN -->
+    <section id="adminSection"
+             class="section"
+             style="display:none;">
+
+        <h2>
+            Panel Administrador
+        </h2>
+
+        <div class="admin-form">
+
+            <input
+                type="text"
+                id="eventTitle"
+                placeholder="Título">
+
+            <input
+                type="text"
+                id="eventDescription"
+                placeholder="Descripción">
+
+            <input
+                type="datetime-local"
+                id="eventDate">
+
+            <input
+                type="text"
+                id="eventVenue"
+                placeholder="Lugar">
+
+            <input
+                type="number"
+                id="eventCapacity"
+                placeholder="Capacidad">
+
+            <input
+                type="number"
+                id="eventPrice"
+                placeholder="Precio">
+
+            <button onclick="createEvent()">
+                Crear Evento
+            </button>
+
+        </div>
+
+        <div id="adminEvents"
+             class="cards-container">
+
+        </div>
+
+    </section>
+
+    <!-- MODAL EDITAR -->
+    <div id="editModal"
+         class="modal">
+
+        <div class="modal-content">
+
+            <span class="close"
+                  onclick="closeModal()">
+
+                &times;
+
+            </span>
+
+            <h2>
+                Editar Evento
+            </h2>
+
+            <input
+                type="hidden"
+                id="editId">
+
+            <input
+                type="text"
+                id="editTitle"
+                placeholder="Título">
+
+            <input
+                type="text"
+                id="editDescription"
+                placeholder="Descripción">
+
+            <input
+                type="datetime-local"
+                id="editDate">
+
+            <input
+                type="text"
+                id="editVenue"
+                placeholder="Lugar">
+
+            <input
+                type="number"
+                id="editCapacity"
+                placeholder="Capacidad">
+
+            <input
+                type="number"
+                id="editPrice"
+                placeholder="Precio">
+
+            <button onclick="updateEvent()">
+                Guardar Cambios
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <p>
+            Event Booking System © 2026
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
