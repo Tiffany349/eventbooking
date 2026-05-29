@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registro</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <h1>
+                Crear Cuenta
+            </h1>
+
+            <p>
+                Regístrate para reservar eventos
+            </p>
+
+            <input type="text"
+                   id="regUsername"
+                   placeholder="Username">
+
+            <input type="text"
+                   id="regFirstname"
+                   placeholder="Nombre">
+
+            <input type="text"
+                   id="regLastname"
+                   placeholder="Apellido">
+
+            <input type="number"
+                   id="regAge"
+                   placeholder="Edad">
+
+            <input type="password"
+                   id="regPassword"
+                   placeholder="Password">
+
+            <button onclick="registerUser()">
+                Registrarse
+            </button>
+
+            <div id="message"
+                 class="message">
+            </div>
+
+            <a href="index.html"
+               class="link">
+
+                ¿Ya tienes cuenta?
+                Inicia sesión
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
