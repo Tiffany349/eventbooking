@@ -2,6 +2,7 @@ package sv.udb.eventbooking.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 
 import sv.udb.eventbooking.entity.Event;
 import sv.udb.eventbooking.enums.BookingStatus;
@@ -13,6 +14,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+=======
+import sv.udb.eventbooking.entity.Event;
+import sv.udb.eventbooking.repository.EventRepository;
+
+import java.util.List;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 import java.util.Optional;
 
 @Service
@@ -21,6 +28,7 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
+<<<<<<< HEAD
     @Autowired
     private BookingRepository bookingRepository;
 
@@ -148,15 +156,48 @@ public class EventService {
         event.setPrice_per_ticket(
                 eventData.getPrice_per_ticket()
         );
+=======
+    // LISTAR TODOS
+    public List<Event> getAllEvents() {
+        return eventRepository.findAll();
+    }
+
+    // BUSCAR POR ID
+    public Optional<Event> getEventById(Integer id) {
+        return eventRepository.findById(id);
+    }
+
+    // CREAR EVENTO
+    public Event saveEvent(Event event) {
+        return eventRepository.save(event);
+    }
+
+    // ACTUALIZAR EVENTO
+    public Event updateEvent(Integer id, Event eventData) {
+
+        Event event = eventRepository.findById(id).orElseThrow();
+
+        event.setTitle(eventData.getTitle());
+        event.setDescription(eventData.getDescription());
+        event.setEvent_date(eventData.getEvent_date());
+        event.setVenue(eventData.getVenue());
+        event.setCapacity(eventData.getCapacity());
+        event.setPrice_per_ticket(eventData.getPrice_per_ticket());
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
         return eventRepository.save(event);
     }
 
+<<<<<<< HEAD
     //
     // ELIMINAR EVENTO
     //
     public void deleteEvent(Integer id) {
 
+=======
+    // ELIMINAR EVENTO
+    public void deleteEvent(Integer id) {
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
         eventRepository.deleteById(id);
     }
 }

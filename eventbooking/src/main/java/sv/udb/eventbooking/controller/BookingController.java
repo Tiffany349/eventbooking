@@ -1,6 +1,7 @@
 package sv.udb.eventbooking.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 
 import org.springframework.security.core.Authentication;
 
@@ -8,12 +9,21 @@ import org.springframework.web.bind.annotation.*;
 
 import sv.udb.eventbooking.entity.Booking;
 
+=======
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+import sv.udb.eventbooking.entity.Booking;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 import sv.udb.eventbooking.service.BookingService;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 import java.util.List;
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 import java.util.Map;
 
 @SecurityRequirement(name = "bearerAuth")
@@ -32,11 +42,17 @@ public class BookingController {
             Authentication authentication
     ) {
 
+<<<<<<< HEAD
         Integer eventId =
                 body.get("eventId");
 
         Integer quantity =
                 body.get("quantity");
+=======
+        Integer eventId = body.get("eventId");
+
+        Integer quantity = body.get("quantity");
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
         String username =
                 authentication.getName();
@@ -48,7 +64,11 @@ public class BookingController {
         );
     }
 
+<<<<<<< HEAD
     // TODAS
+=======
+    // LISTAR TODAS
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     @GetMapping
     public List<Booking> getAllBookings() {
 
@@ -70,6 +90,7 @@ public class BookingController {
                 );
     }
 
+<<<<<<< HEAD
     // CANCELAR
     @DeleteMapping("/{id}")
     public Booking cancelBooking(
@@ -77,5 +98,21 @@ public class BookingController {
     ) {
 
         return bookingService.cancelBooking(id);
+=======
+    // CANCELAR SOLO MIS RESERVAS
+    @DeleteMapping("/{id}")
+    public Booking cancelBooking(
+            @PathVariable Integer id,
+            Authentication authentication
+    ) {
+
+        String username =
+                authentication.getName();
+
+        return bookingService.cancelBooking(
+                id,
+                username
+        );
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     }
 }

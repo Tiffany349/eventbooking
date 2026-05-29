@@ -6,6 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+<<<<<<< HEAD
 html{
     scroll-behavior: smooth;
 }
@@ -86,10 +87,28 @@ body{
         rgba(106,13,37,0.92);
 
     backdrop-filter: blur(10px);
+=======
+body{
+    background: #fff5f7;
+    color: #3d0c1d;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #6a0d25,
+        #8b1e3f
+    );
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
     padding: 20px 40px;
 
     display: flex;
+<<<<<<< HEAD
 
     justify-content: space-between;
 
@@ -124,25 +143,53 @@ body{
 
     display: flex;
 
+=======
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav-buttons{
+    display: flex;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     gap: 15px;
 }
 
 .nav-buttons button{
+<<<<<<< HEAD
 
     background: white;
 
+=======
+    background: white;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     color: #8b1e3f;
 
     border: none;
 
+<<<<<<< HEAD
     padding: 12px 18px;
 
     border-radius: 14px;
+=======
+    padding: 10px 18px;
+
+    border-radius: 12px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
     font-weight: bold;
 
     cursor: pointer;
 
+<<<<<<< HEAD
     transition: all 0.3s ease;
 
     box-shadow:
@@ -188,16 +235,134 @@ body{
 .hero p{
 
     font-size: 20px;
+=======
+    transition: 0.3s;
+}
+
+.nav-buttons button:hover{
+    background: #ffd6e0;
+
+    transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.hero h1{
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+    color: #6a0d25;
+}
+
+.hero p{
+    font-size: 18px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
     color: #6f4553;
 }
 
+<<<<<<< HEAD
 /* =========================
    MENSAJES
 ========================= */
 
 .message{
 
+=======
+/* SECTION */
+
+.section{
+    padding: 30px 50px;
+}
+
+.section h2{
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    color: #6a0d25;
+}
+
+/* CARDS */
+
+.cards-container{
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px,1fr));
+
+    gap: 25px;
+}
+
+.card{
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    color: #8b1e3f;
+
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.card p{
+    margin-bottom: 8px;
+
+    color: #5e3744;
+}
+
+.card button{
+    margin-top: 15px;
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover{
+    background: #6a0d25;
+}
+
+/* MENSAJES */
+
+.message{
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     width: 90%;
 
     margin: 20px auto;
@@ -206,6 +371,7 @@ body{
 
     padding: 15px;
 
+<<<<<<< HEAD
     border-radius: 14px;
 
     font-weight: bold;
@@ -525,6 +691,17 @@ body{
 .footer{
 
     margin-top: auto;
+=======
+    border-radius: 12px;
+
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top: 50px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
     background: #6a0d25;
 
@@ -533,6 +710,7 @@ body{
     text-align: center;
 
     padding: 20px;
+<<<<<<< HEAD
 
     font-size: 15px;
 }
@@ -540,6 +718,30 @@ body{
 /* =========================
    AUTH PAGES
 ========================= */
+=======
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .hero h1{
+        font-size: 30px;
+    }
+
+    .section{
+        padding: 20px;
+    }
+}
+
+/* ===== AUTH PAGES ===== */
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 
 .auth-container{
 
@@ -548,15 +750,27 @@ body{
     display: flex;
 
     justify-content: center;
+<<<<<<< HEAD
 
     align-items: center;
 
+=======
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffd6e7
+    );
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     padding: 20px;
 }
 
 .auth-card{
 
     width: 100%;
+<<<<<<< HEAD
     max-width: 430px;
 
     background:
@@ -572,6 +786,20 @@ body{
         0 15px 35px rgba(0,0,0,0.15);
 
     animation: fadeIn 1s ease;
+=======
+    max-width: 420px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    text-align: center;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
 
 .auth-card h1{
@@ -580,24 +808,35 @@ body{
 
     margin-bottom: 10px;
 
+<<<<<<< HEAD
     text-align: center;
 
     font-size: 38px;
+=======
+    font-size: 34px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
 
 .auth-card p{
 
+<<<<<<< HEAD
     text-align: center;
 
     margin-bottom: 30px;
 
     color: #6f4553;
+=======
+    color: #7a4a58;
+
+    margin-bottom: 30px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
 
 .auth-card input{
 
     width: 100%;
 
+<<<<<<< HEAD
     padding: 15px;
 
     margin-bottom: 18px;
@@ -608,6 +847,20 @@ body{
 
     outline: none;
 
+=======
+    padding: 14px;
+
+    margin-bottom: 18px;
+
+    border: 2px solid #f3c5d3;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    font-size: 15px;
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     transition: 0.3s;
 }
 
@@ -616,13 +869,18 @@ body{
     border-color: #8b1e3f;
 
     box-shadow:
+<<<<<<< HEAD
         0 0 12px rgba(139,30,63,0.2);
+=======
+        0 0 10px rgba(139,30,63,0.2);
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
 
 .auth-card button{
 
     width: 100%;
 
+<<<<<<< HEAD
     padding: 15px;
 
     border: none;
@@ -638,6 +896,23 @@ body{
 
     color: white;
 
+=======
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #8b1e3f,
+        #6a0d25
+    );
+
+    color: white;
+
+    font-size: 16px;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     font-weight: bold;
 
     cursor: pointer;
@@ -647,9 +922,15 @@ body{
 
 .auth-card button:hover{
 
+<<<<<<< HEAD
     transform:
         translateY(-2px)
         scale(1.02);
+=======
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
 
 .link{
@@ -658,12 +939,19 @@ body{
 
     margin-top: 20px;
 
+<<<<<<< HEAD
     text-align: center;
 
     text-decoration: none;
 
     color: #8b1e3f;
 
+=======
+    color: #8b1e3f;
+
+    text-decoration: none;
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
     font-weight: bold;
 }
 
@@ -672,6 +960,7 @@ body{
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /* =========================
    RESPONSIVE
 ========================= */
@@ -694,4 +983,99 @@ body{
 
         padding: 25px;
     }
+=======
+/* ===== FOOTER FIJO ===== */
+
+body{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer{
+
+    margin-top: auto;
+<<<<<<< HEAD
+}
+
+/* ===== ADMIN ===== */
+
+.admin-form{
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-bottom: 30px;
+
+    display: grid;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin-form input{
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 2px solid #f3c5d3;
+
+    outline: none;
+}
+
+.admin-form input:focus{
+
+    border-color: #8b1e3f;
+}
+
+.admin-form button{
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #8b1e3f;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.delete-btn{
+
+    background: #c1121f !important;
+}
+
+.delete-btn:hover{
+
+    background: #780000 !important;
+}
+.admin-buttons{
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.admin-buttons button{
+
+    flex: 1;
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
 }
