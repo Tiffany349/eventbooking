@@ -1,0 +1,697 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f7,
+            #ffe7ee
+        );
+
+    color: #3d0c1d;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft{
+
+    from{
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse{
+
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.03);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+    width: 100%;
+
+    background:
+        rgba(106,13,37,0.92);
+
+    backdrop-filter: blur(10px);
+
+    padding: 20px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.15);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.logo{
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    animation: slideLeft 1s ease;
+}
+
+.nav-buttons{
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.nav-buttons button{
+
+    background: white;
+
+    color: #8b1e3f;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-buttons button:hover{
+
+    background: #ffd6e0;
+
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 18px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    animation: fadeIn 1s ease;
+}
+
+.hero h1{
+
+    font-size: 50px;
+
+    color: #6a0d25;
+
+    margin-bottom: 15px;
+
+    animation: pulse 3s infinite;
+}
+
+.hero p{
+
+    font-size: 20px;
+
+    color: #6f4553;
+}
+
+/* =========================
+   MENSAJES
+========================= */
+
+.message{
+
+    width: 90%;
+
+    margin: 20px auto;
+
+    text-align: center;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    font-weight: bold;
+
+    background: white;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.1);
+
+    animation: fadeIn 0.5s ease;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+
+    padding: 40px 50px;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.section h2{
+
+    margin-bottom: 25px;
+
+    font-size: 34px;
+
+    color: #6a0d25;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards-container{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px,1fr));
+
+    gap: 30px;
+}
+
+.card{
+
+    background:
+        rgba(255,255,255,0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12);
+
+    transition: all 0.35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: fadeIn 0.8s ease;
+}
+
+.card::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.4),
+            transparent
+        );
+
+    transition: 0.7s;
+}
+
+.card:hover::before{
+
+    left: 100%;
+}
+
+.card:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.18);
+}
+
+.card h3{
+
+    color: #8b1e3f;
+
+    margin-bottom: 14px;
+
+    font-size: 28px;
+}
+
+.card p{
+
+    margin-bottom: 10px;
+
+    color: #5e3744;
+
+    line-height: 1.5;
+}
+
+.card button{
+
+    margin-top: 18px;
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b1e3f,
+            #6a0d25
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,0.15);
+}
+
+.card button:hover{
+
+    transform:
+        translateY(-2px)
+        scale(1.02);
+
+    opacity: 0.95;
+
+    box-shadow:
+        0 10px 18px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   FORM ADMIN
+========================= */
+
+.admin-form{
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    margin-bottom: 35px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.1);
+
+    animation: fadeIn 1s ease;
+}
+
+.admin-form input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+
+    border: 2px solid #f0c8d4;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.admin-form input:focus{
+
+    border-color: #8b1e3f;
+
+    box-shadow:
+        0 0 10px rgba(139,30,63,0.2);
+}
+
+.admin-form button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b1e3f,
+            #6a0d25
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.admin-form button:hover{
+
+    transform: scale(1.02);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.45);
+
+    backdrop-filter: blur(4px);
+
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content{
+
+    background: white;
+
+    margin: 5% auto;
+
+    padding: 30px;
+
+    width: 90%;
+    max-width: 500px;
+
+    border-radius: 24px;
+
+    animation: fadeIn 0.4s ease;
+}
+
+.modal-content input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    border: 2px solid #f1d1db;
+}
+
+.close{
+
+    float: right;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #8b1e3f;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    margin-top: auto;
+
+    background: #6a0d25;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 15px;
+}
+
+/* =========================
+   AUTH PAGES
+========================= */
+
+.auth-container{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.auth-card{
+
+    width: 100%;
+    max-width: 430px;
+
+    background:
+        rgba(255,255,255,0.8);
+
+    backdrop-filter: blur(12px);
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.15);
+
+    animation: fadeIn 1s ease;
+}
+
+.auth-card h1{
+
+    color: #8b1e3f;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-size: 38px;
+}
+
+.auth-card p{
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: #6f4553;
+}
+
+.auth-card input{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    border: 2px solid #f1c8d5;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.auth-card input:focus{
+
+    border-color: #8b1e3f;
+
+    box-shadow:
+        0 0 12px rgba(139,30,63,0.2);
+}
+
+.auth-card button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b1e3f,
+            #6a0d25
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.auth-card button:hover{
+
+    transform:
+        translateY(-2px)
+        scale(1.02);
+}
+
+.link{
+
+    display: block;
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: #8b1e3f;
+
+    font-weight: bold;
+}
+
+.link:hover{
+
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .hero h1{
+
+        font-size: 36px;
+    }
+
+    .section{
+
+        padding: 25px;
+    }
+}
