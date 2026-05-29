@@ -32,10 +32,25 @@ public class Event {
 
     @Column(nullable = false)
     private BigDecimal price_per_ticket;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 
     //
     // NO SE GUARDA EN BD
     //
     @Transient
     private Integer availableSeats;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 }

@@ -1,6 +1,13 @@
 package sv.udb.eventbooking.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 
 import org.springframework.security.core.Authentication;
 
@@ -8,12 +15,35 @@ import org.springframework.web.bind.annotation.*;
 
 import sv.udb.eventbooking.entity.Booking;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+import sv.udb.eventbooking.entity.Booking;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 import sv.udb.eventbooking.service.BookingService;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 import java.util.List;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 import java.util.Map;
 
 @SecurityRequirement(name = "bearerAuth")
@@ -32,11 +62,29 @@ public class BookingController {
             Authentication authentication
     ) {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
         Integer eventId =
                 body.get("eventId");
 
         Integer quantity =
                 body.get("quantity");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        Integer eventId = body.get("eventId");
+
+        Integer quantity = body.get("quantity");
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
 
         String username =
                 authentication.getName();
@@ -48,7 +96,19 @@ public class BookingController {
         );
     }
 
+<<<<<<< HEAD
     // TODAS
+=======
+<<<<<<< HEAD
+    // TODAS
+=======
+<<<<<<< HEAD
+    // TODAS
+=======
+    // LISTAR TODAS
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
     @GetMapping
     public List<Booking> getAllBookings() {
 
@@ -70,6 +130,13 @@ public class BookingController {
                 );
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
     // CANCELAR
     @DeleteMapping("/{id}")
     public Booking cancelBooking(
@@ -77,5 +144,27 @@ public class BookingController {
     ) {
 
         return bookingService.cancelBooking(id);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+    // CANCELAR SOLO MIS RESERVAS
+    @DeleteMapping("/{id}")
+    public Booking cancelBooking(
+            @PathVariable Integer id,
+            Authentication authentication
+    ) {
+
+        String username =
+                authentication.getName();
+
+        return bookingService.cancelBooking(
+                id,
+                username
+        );
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
+>>>>>>> 877167939f9e10d949c292c821688475df3ee5be
     }
 }
