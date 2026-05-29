@@ -1,6 +1,7 @@
 package sv.udb.eventbooking.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 
 import org.springframework.stereotype.Service;
 
@@ -22,6 +23,27 @@ import java.util.List;
 
 import java.util.Map;
 
+=======
+import org.springframework.stereotype.Service;
+<<<<<<< HEAD
+
+import sv.udb.eventbooking.entity.Event;
+import sv.udb.eventbooking.enums.BookingStatus;
+
+import sv.udb.eventbooking.repository.BookingRepository;
+import sv.udb.eventbooking.repository.EventRepository;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+=======
+import sv.udb.eventbooking.entity.Event;
+import sv.udb.eventbooking.repository.EventRepository;
+
+import java.util.List;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 import java.util.Optional;
 
 @Service
@@ -30,11 +52,19 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     @Autowired
     private BookingRepository bookingRepository;
 
     //
+<<<<<<< HEAD
     // LISTAR EVENTOS
+=======
+    // LISTAR TODOS
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     //
     public List<Map<String, Object>> getAllEvents() {
 
@@ -53,11 +83,14 @@ public class EventService {
                                     BookingStatus.CONFIRMED
                             );
 
+<<<<<<< HEAD
             if (reserved == null) {
 
                 reserved = 0;
             }
 
+=======
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             Integer remaining =
                     event.getCapacity() - reserved;
 
@@ -111,11 +144,17 @@ public class EventService {
     }
 
     //
+<<<<<<< HEAD
     // BUSCAR EVENTO
     //
     public Optional<Event> getEventById(
             Integer id
     ) {
+=======
+    // BUSCAR POR ID
+    //
+    public Optional<Event> getEventById(Integer id) {
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
         return eventRepository.findById(id);
     }
@@ -123,9 +162,13 @@ public class EventService {
     //
     // CREAR EVENTO
     //
+<<<<<<< HEAD
     public Event saveEvent(
             Event event
     ) {
+=======
+    public Event saveEvent(Event event) {
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
         return eventRepository.save(event);
     }
@@ -166,10 +209,42 @@ public class EventService {
         event.setPrice_per_ticket(
                 eventData.getPrice_per_ticket()
         );
+<<<<<<< HEAD
+=======
+=======
+    // LISTAR TODOS
+    public List<Event> getAllEvents() {
+        return eventRepository.findAll();
+    }
+
+    // BUSCAR POR ID
+    public Optional<Event> getEventById(Integer id) {
+        return eventRepository.findById(id);
+    }
+
+    // CREAR EVENTO
+    public Event saveEvent(Event event) {
+        return eventRepository.save(event);
+    }
+
+    // ACTUALIZAR EVENTO
+    public Event updateEvent(Integer id, Event eventData) {
+
+        Event event = eventRepository.findById(id).orElseThrow();
+
+        event.setTitle(eventData.getTitle());
+        event.setDescription(eventData.getDescription());
+        event.setEvent_date(eventData.getEvent_date());
+        event.setVenue(eventData.getVenue());
+        event.setCapacity(eventData.getCapacity());
+        event.setPrice_per_ticket(eventData.getPrice_per_ticket());
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
         return eventRepository.save(event);
     }
 
+<<<<<<< HEAD
     //
     // ELIMINAR EVENTO
     //
@@ -186,6 +261,18 @@ public class EventService {
         //
         // ELIMINAR EVENTO
         //
+=======
+<<<<<<< HEAD
+    //
+    // ELIMINAR EVENTO
+    //
+    public void deleteEvent(Integer id) {
+
+=======
+    // ELIMINAR EVENTO
+    public void deleteEvent(Integer id) {
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         eventRepository.deleteById(id);
     }
 }

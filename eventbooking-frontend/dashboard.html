@@ -8,7 +8,21 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
     <title>Dashboard</title>
+=======
+<<<<<<< HEAD
+    <title>Dashboard</title>
+=======
+<<<<<<< HEAD
+    <title>
+        Dashboard | Event Booking
+    </title>
+=======
+    <title>Dashboard</title>
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
     <link rel="stylesheet"
           href="css/style.css">
@@ -34,6 +48,14 @@
                 Mis Reservas
             </button>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <!-- SOLO ADMIN -->
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             <button
                 id="adminButton"
                 onclick="showAdminPanel()"
@@ -43,6 +65,14 @@
 
             </button>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             <button onclick="logout()">
                 Cerrar sesión
             </button>
@@ -54,6 +84,25 @@
     <!-- HERO -->
     <section class="hero">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div class="hero-content">
+
+            <h1 id="welcome">
+                Bienvenido 👋
+            </h1>
+
+            <p>
+                Reserva tus eventos favoritos
+            </p>
+
+        </div>
+=======
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         <h1 id="welcome">
             Bienvenido 👋
         </h1>
@@ -61,6 +110,13 @@
         <p>
             Reserva tus eventos favoritos
         </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
     </section>
 
@@ -74,9 +130,31 @@
              class="section"
              style="display:none;">
 
+<<<<<<< HEAD
         <h2>
             Eventos Disponibles
         </h2>
+=======
+<<<<<<< HEAD
+        <h2>
+            Eventos Disponibles
+        </h2>
+=======
+<<<<<<< HEAD
+        <div class="section-header">
+
+            <h2>
+                🎫 Eventos Disponibles
+            </h2>
+
+        </div>
+=======
+        <h2>
+            Eventos Disponibles
+        </h2>
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
         <div id="events"
              class="cards-container">
@@ -90,9 +168,31 @@
              class="section"
              style="display:none;">
 
+<<<<<<< HEAD
         <h2>
             Mis Reservas
         </h2>
+=======
+<<<<<<< HEAD
+        <h2>
+            Mis Reservas
+        </h2>
+=======
+<<<<<<< HEAD
+        <div class="section-header">
+
+            <h2>
+                📌 Mis Reservas
+            </h2>
+
+        </div>
+=======
+        <h2>
+            Mis Reservas
+        </h2>
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
         <div id="bookings"
              class="cards-container">
@@ -101,11 +201,22 @@
 
     </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     <!-- ADMIN -->
     <section id="adminSection"
              class="section"
              style="display:none;">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         <h2>
             Panel Administrador
         </h2>
@@ -141,12 +252,75 @@
                 id="eventPrice"
                 placeholder="Precio">
 
+<<<<<<< HEAD
             <button onclick="saveEvent()">
+=======
+            <button onclick="createEvent()">
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
                 Crear Evento
             </button>
 
         </div>
 
+<<<<<<< HEAD
+=======
+=======
+        <div class="section-header">
+
+            <h2>
+                👑 Panel Administrador
+            </h2>
+
+            <p>
+                Gestiona eventos del sistema
+            </p>
+
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="admin-form-container">
+
+            <div class="admin-form">
+
+                <input
+                    type="text"
+                    id="eventTitle"
+                    placeholder="Título del evento">
+
+                <input
+                    type="text"
+                    id="eventDescription"
+                    placeholder="Descripción">
+
+                <input
+                    type="datetime-local"
+                    id="eventDate">
+
+                <input
+                    type="text"
+                    id="eventVenue"
+                    placeholder="Lugar">
+
+                <input
+                    type="number"
+                    id="eventCapacity"
+                    placeholder="Capacidad">
+
+                <input
+                    type="number"
+                    id="eventPrice"
+                    placeholder="Precio">
+<button onclick="saveEvent()">
+    Crear Evento
+</button>
+
+            </div>
+
+        </div>
+
+        <!-- EVENTOS ADMIN -->
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         <div id="adminEvents"
              class="cards-container">
 
@@ -154,6 +328,10 @@
 
     </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     <!-- MODAL EDITAR -->
     <div id="editModal"
          class="modal">
@@ -212,6 +390,13 @@
 
     </div>
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     <!-- FOOTER -->
     <footer class="footer">
 

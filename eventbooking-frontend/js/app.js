@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 window.BASE_URL =
+=======
+const BASE_URL =
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     "http://localhost:8080";
 
 // TOKEN
@@ -9,6 +13,13 @@ function token() {
     );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 // ROLE
 function role() {
 
@@ -17,6 +28,14 @@ function role() {
     );
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 // MENSAJES
 function showMessage(msg) {
 
@@ -96,12 +115,28 @@ async function login() {
 
         localStorage.setItem(
             "username",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             data.username
         );
 
         localStorage.setItem(
             "role",
             data.role
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+            username
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         );
 
         window.location.href =
@@ -236,6 +271,13 @@ window.onload = () => {
             username +
             " 👋";
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
     if (
         role() === "ADMIN"
@@ -252,6 +294,14 @@ window.onload = () => {
                 "block";
         }
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 };
 
 //
@@ -267,10 +317,25 @@ function showEvents() {
         "bookingsSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     document.getElementById(
         "adminSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     loadEvents();
 }
 
@@ -287,14 +352,36 @@ function showBookings() {
         "eventsSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     document.getElementById(
         "adminSection"
     ).style.display = "none";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     loadBookings();
 }
 
 //
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 // PANEL ADMIN
 //
 function showAdminPanel() {
@@ -368,7 +455,15 @@ async function loadAdminEvents() {
                     <div class="admin-buttons">
 
                         <button
+<<<<<<< HEAD
                             onclick='openEditModal(${JSON.stringify(e)})'>
+=======
+<<<<<<< HEAD
+                            onclick='openEditModal(${JSON.stringify(e)})'>
+=======
+                            onclick="editEvent(${e.id_event})">
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
                             Editar
 
@@ -405,6 +500,16 @@ async function loadAdminEvents() {
 // CARGAR EVENTOS
 //
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+// CARGAR EVENTOS
+//
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 async function loadEvents() {
 
     try {
@@ -419,8 +524,29 @@ async function loadEvents() {
             }
         );
 
+<<<<<<< HEAD
         if (!res.ok) {
 
+=======
+<<<<<<< HEAD
+        if (!res.ok) {
+
+=======
+<<<<<<< HEAD
+        // VALIDAR RESPUESTA
+        if (!res.ok) {
+
+            if (res.status === 403) {
+
+                showMessage(
+                    "No autorizado"
+                );
+
+                return;
+            }
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             showMessage(
                 "Error cargando eventos"
             );
@@ -428,11 +554,23 @@ async function loadEvents() {
             return;
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         const events =
             await res.json();
 
         let html = "";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         events.forEach((e) => {
 
             const full =
@@ -489,6 +627,45 @@ async function loadEvents() {
 
     </div>
 `;
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+        events.forEach((e) => {
+=======
+        events.forEach(e => {
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+
+            html += `
+                <div class="card">
+
+                    <h3>
+                        ${e.title}
+                    </h3>
+
+                    <p>
+                        📍 ${e.venue}
+                    </p>
+
+                    <p>
+                        💲 ${e.price_per_ticket}
+                    </p>
+
+                    <p>
+                        👥 ${e.capacity} cupos
+                    </p>
+
+                    <button
+                        onclick="book(${e.id_event})">
+
+                        Reservar
+
+                    </button>
+
+                </div>
+            `;
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         });
 
         document.getElementById(
@@ -515,6 +692,10 @@ async function book(idEvent) {
             "Cantidad:"
         );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     if (
         quantity === null ||
         quantity === "" ||
@@ -528,6 +709,16 @@ async function book(idEvent) {
         return;
     }
 
+<<<<<<< HEAD
+=======
+=======
+    const userId =
+        prompt(
+            "Tu userId:"
+        );
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     try {
 
         const res = await fetch(
@@ -545,11 +736,22 @@ async function book(idEvent) {
 
                 body: JSON.stringify({
                     eventId: idEvent,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+                    userId: parseInt(userId),
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
                     quantity: parseInt(quantity)
                 })
             }
         );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         //
         // SI FALLA
         //
@@ -588,6 +790,30 @@ async function book(idEvent) {
         );
     }
 }
+<<<<<<< HEAD
+=======
+=======
+        if (res.ok) {
+
+            showMessage(
+                "Reserva creada"
+            );
+
+        } else {
+
+            showMessage(
+                "No hay cupos disponibles"
+            );
+        }
+
+    } catch (error) {
+
+        console.log(error);
+    }
+}
+
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 //
 // CARGAR RESERVAS
 //
@@ -610,6 +836,13 @@ async function loadBookings() {
 
         let html = "";
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         const activeBookings =
             bookings.filter(
                 b => b.status !== "CANCELLED"
@@ -628,6 +861,15 @@ async function loadBookings() {
         }
 
         activeBookings.forEach((b) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+        bookings.forEach(b => {
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
             html += `
                 <div class="card">
@@ -652,7 +894,21 @@ async function loadBookings() {
                     </p>
 
                     <button
+<<<<<<< HEAD
                         onclick="cancelBooking(${b.id_booking})">
+=======
+<<<<<<< HEAD
+                        onclick="cancelBooking(${b.id_booking})">
+=======
+<<<<<<< HEAD
+                        onclick="cancelBooking(${b.id_booking})">
+=======
+                        onclick="cancelBooking(
+                            ${b.id_booking}
+                        )">
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
                         Cancelar
 
@@ -671,7 +927,19 @@ async function loadBookings() {
         console.log(error);
 
         showMessage(
+<<<<<<< HEAD
             "Error cargando reservas"
+=======
+<<<<<<< HEAD
+            "Error cargando reservas"
+=======
+<<<<<<< HEAD
+            "Error cargando reservas"
+=======
+            "No se pudieron cargar reservas"
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
         );
     }
 }
@@ -699,8 +967,21 @@ async function cancelBooking(id) {
             "Reserva cancelada"
         );
 
+<<<<<<< HEAD
         loadBookings();
 
+=======
+<<<<<<< HEAD
+        loadBookings();
+
+=======
+<<<<<<< HEAD
+        loadBookings();
+
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     } catch (error) {
 
         console.log(error);
@@ -708,6 +989,13 @@ async function cancelBooking(id) {
 }
 
 //
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 // CREAR EVENTO
 //
 //
@@ -891,7 +1179,11 @@ async function saveEvent() {
 //
 // EDITAR EVENTO
 //
+<<<<<<< HEAD
 var editingEventId = null;
+=======
+let editingEventId = null;
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 
 async function editEvent(id) {
 
@@ -966,6 +1258,7 @@ async function deleteEvent(id) {
         return;
     }
 
+<<<<<<< HEAD
     //
     // DEBUG
     //
@@ -979,6 +1272,8 @@ async function deleteEvent(id) {
         role()
     );
 
+=======
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     try {
 
         const res =
@@ -988,7 +1283,11 @@ async function deleteEvent(id) {
                     method: "DELETE",
 
                     headers: {
+<<<<<<< HEAD
                         "Authorization":
+=======
+                        Authorization:
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
                             "Bearer " + token()
                     }
                 }
@@ -997,18 +1296,25 @@ async function deleteEvent(id) {
         if (res.ok) {
 
             showMessage(
+<<<<<<< HEAD
                 "Evento eliminado ✅"
+=======
+                "Evento eliminado"
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             );
 
             loadAdminEvents();
 
         } else {
 
+<<<<<<< HEAD
             console.log(
                 "STATUS:",
                 res.status
             );
 
+=======
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
             showMessage(
                 "Error eliminando"
             );
@@ -1020,7 +1326,17 @@ async function deleteEvent(id) {
     }
 }
 
+<<<<<<< HEAD
 //
+=======
+
+//
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 // LOGOUT
 //
 function logout() {
@@ -1033,10 +1349,21 @@ function logout() {
         "username"
     );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     localStorage.removeItem(
         "role"
     );
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
     window.location.href =
         "index.html";
 }
@@ -1181,4 +1508,13 @@ async function updateEvent() {
 
         console.log(error);
     }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> ce25f670b89a25dd008aea6d4aae2b8058309c49
+    window.location.href =
+        "index.html";
+>>>>>>> aa5d16b6e567a8aaff7c06c7e9e3255d2c4d890c
+>>>>>>> 94a7a18f1bf8c674dd8860b156b541530868c5d1
 }
